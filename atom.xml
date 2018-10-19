@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>迷途小学生</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://tiger07706.github.io/"/>
+  <updated>2018-10-18T07:07:32.789Z</updated>
+  <id>http://tiger07706.github.io/</id>
+  
+  <author>
+    <name>tiger07706</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>排序算法</title>
+    <link href="http://tiger07706.github.io/2018/10/18/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    <id>http://tiger07706.github.io/2018/10/18/排序算法/</id>
+    <published>2018-10-18T03:19:28.000Z</published>
+    <updated>2018-10-18T07:07:32.789Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="十大基本排序算法汇总"><a href="#十大基本排序算法汇总" class="headerlink" title="十大基本排序算法汇总"></a>十大基本排序算法汇总</h1><h2 id="时间复杂度和空间复杂度对比"><a href="#时间复杂度和空间复杂度对比" class="headerlink" title="时间复杂度和空间复杂度对比"></a>时间复杂度和空间复杂度对比</h2><table><thead><tr><th>排序算法</th><th style="text-align:right">时间复杂度（平均）</th><th style="text-align:right">时间复杂度（最坏）</th><th style="text-align:right">时间复杂度（最好）</th><th style="text-align:right">空间复杂度</th><th style="text-align:right">稳定性 </th></tr></thead><tbody><tr><td>冒泡排序</td><td style="text-align:right">O(n^2)</td><td style="text-align:right">O(n^2)</td><td style="text-align:right">O(n)</td><td style="text-align:right">O(1)</td><td style="text-align:right">稳定</td></tr><tr><td>插入排序</td><td style="text-align:right">O(n^2)</td><td style="text-align:right">O(n^2)</td><td style="text-align:right">O(n)</td><td style="text-align:right">O(1)</td><td style="text-align:right">稳定</td></tr><tr><td>归并排序</td><td style="text-align:right">O(nlog<sub>2</sub>n)</td><td style="text-align:right">O(nlog<sub>2</sub>n)</td><td style="text-align:right">O(nlog<sub>2</sub>n)</td><td style="text-align:right">O(n)</td><td style="text-align:right">稳定</td></tr><tr><td>计数排序</td><td style="text-align:right">O(n+k)</td><td style="text-align:right">O(n+k)</td><td style="text-align:right">O(n+k)</td><td style="text-align:right">O(n+k)</td><td style="text-align:right">稳定</td></tr><tr><td>桶排序</td><td style="text-align:right">O(n+k)</td><td style="text-align:right">O(n^2)</td><td style="text-align:right">O(n)</td><td style="text-align:right">O(n+k)</td><td style="text-align:right">稳定</td></tr><tr><td>基数排序</td><td style="text-align:right">O(n*k)</td><td style="text-align:right">O(n*k)</td><td style="text-align:right">O(n*k)</td><td style="text-align:right">O(n+k)</td><td style="text-align:right">稳定</td></tr><tr><td>希尔排序</td><td style="text-align:right">O(n<sup>1.3</sup>)</td><td style="text-align:right">O(n^2)</td><td style="text-align:right">O(n)</td><td style="text-align:right">O(1)</td><td style="text-align:right">不稳定</td></tr><tr><td>选择排序</td><td style="text-align:right">O(n^2)</td><td style="text-align:right">O(n^2)</td><td style="text-align:right">O(n^2)</td><td style="text-align:right">O(1)</td><td style="text-align:right">不稳定</td></tr><tr><td>堆排序</td><td style="text-align:right">O(nlog<sub>2</sub>n)</td><td style="text-align:right">O(nlog<sub>2</sub>n)</td><td style="text-align:right">O(nlog<sub>2</sub>n)</td><td style="text-align:right">O(1)</td><td style="text-align:right">不稳定</td></tr><tr><td>快速排序</td><td style="text-align:right">O(nlog<sub>2</sub>n)</td><td style="text-align:right">O(n^2)</td><td style="text-align:right">O(nlog<sub>2</sub>n)</td><td style="text-align:right">O(nlog<sub>2</sub>n)</td><td style="text-align:right">不稳定</td></tr></tbody></table><h2 id="1-冒泡排序"><a href="#1-冒泡排序" class="headerlink" title="1.冒泡排序"></a>1.冒泡排序</h2><p>可能大部分人第一次接触排序，学的都是冒泡排序，不多说，直接贴代码吧。   </p><h3 id="一个优化的思路：标记位判断是否有序"><a href="#一个优化的思路：标记位判断是否有序" class="headerlink" title="一个优化的思路：标记位判断是否有序"></a>一个优化的思路：标记位判断是否有序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public static void BubbleSort(int[] arr) &#123;</span><br><span class="line">for (int i = 0, len = arr.length; i &lt; len - 1; i++) &#123;</span><br><span class="line">boolean flag = false; // 标记判断是否有序</span><br><span class="line">for (int j = 0; j &lt; len - i - 1; j++) &#123;</span><br><span class="line">if (arr[j] &gt; arr[j + 1]) &#123;</span><br><span class="line">swap(arr, j, j + 1);</span><br><span class="line">flag = true;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">if (!flag)break;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="另一个优化思路：记录下最后一次交换的位置j，表示j后面的已经排好序了"><a href="#另一个优化思路：记录下最后一次交换的位置j，表示j后面的已经排好序了" class="headerlink" title="另一个优化思路：记录下最后一次交换的位置j，表示j后面的已经排好序了"></a>另一个优化思路：记录下最后一次交换的位置j，表示j后面的已经排好序了</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public static void BubbleSort2(int[] arr) &#123;</span><br><span class="line">    for (int i = 0, len = arr.length, lastPosition = 0; i &lt; len - 1; i = len - lastPosition - 1) &#123;</span><br><span class="line">        lastPosition = 0;</span><br><span class="line">        for (int j = 0; j &lt; len - i - 1; j++) &#123;</span><br><span class="line">            if (arr[j]&gt;arr[j + 1]) &#123;</span><br><span class="line">                swap(arr, j, j + 1);</span><br><span class="line">                lastPosition = j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="延伸：鸡尾酒排序"><a href="#延伸：鸡尾酒排序" class="headerlink" title="延伸：鸡尾酒排序"></a>延伸：鸡尾酒排序</h3><p>鸡尾酒是一种特殊的冒泡排序，先用正向冒泡，把最大的值冒泡到后面，再用反向冒泡把最小值冒泡到数组前面。</p><ul><li>参考阅读：<a href="https://mp.weixin.qq.com/s/XC85OLOZEUNuV2t6M1I3jg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/XC85OLOZEUNuV2t6M1I3jg</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;十大基本排序算法汇总&quot;&gt;&lt;a href=&quot;#十大基本排序算法汇总&quot; class=&quot;headerlink&quot; title=&quot;十大基本排序算法汇总&quot;&gt;&lt;/a&gt;十大基本排序算法汇总&lt;/h1&gt;&lt;h2 id=&quot;时间复杂度和空间复杂度对比&quot;&gt;&lt;a href=&quot;#时间复杂度和空间
+      
+    
+    </summary>
+    
+      <category term="基础算法" scheme="http://tiger07706.github.io/categories/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="排序算法" scheme="http://tiger07706.github.io/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="数据结构" scheme="http://tiger07706.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo命令速查（持续补充）</title>
+    <link href="http://tiger07706.github.io/2018/10/17/2018-10-17%20hexo%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/"/>
+    <id>http://tiger07706.github.io/2018/10/17/2018-10-17 hexo命令速查/</id>
+    <published>2018-10-17T05:59:25.000Z</published>
+    <updated>2018-10-17T09:45:26.010Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="写作相关的命令"><a href="#写作相关的命令" class="headerlink" title="写作相关的命令"></a>写作相关的命令</h2><h3 id="新建一篇文章"><a href="#新建一篇文章" class="headerlink" title="新建一篇文章"></a>新建一篇文章</h3><pre><code>$ hexo new [layout] &lt;title&gt;</code></pre><p>您可以在命令中指定文章的布局（layout），默认为 post，可以通过修改 _config.yml 中的 default_layout 参数来指定默认布局。</p><ul><li>布局（Layout）<br>Hexo 有三种默认布局：post、page 和 draft，它们分别对应不同的路径，而您自定义的其他布局和 post 相同，都将储存到 source/_posts 文件夹。</li></ul><h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><pre><code>$ hexo g -d$ hexo d -g</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;写作相关的命令&quot;&gt;&lt;a href=&quot;#写作相关的命令&quot; class=&quot;headerlink&quot; title=&quot;写作相关的命令&quot;&gt;&lt;/a&gt;写作相关的命令&lt;/h2&gt;&lt;h3 id=&quot;新建一篇文章&quot;&gt;&lt;a href=&quot;#新建一篇文章&quot; class=&quot;headerlink&quot; 
+      
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://tiger07706.github.io/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://tiger07706.github.io/tags/hexo/"/>
+    
+      <category term="命令" scheme="http://tiger07706.github.io/tags/%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://tiger07706.github.io/2018/10/17/hello-world/"/>
+    <id>http://tiger07706.github.io/2018/10/17/hello-world/</id>
+    <published>2018-10-17T01:54:00.613Z</published>
+    <updated>2018-10-17T01:54:00.614Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
