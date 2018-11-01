@@ -18,18 +18,18 @@
   
   
   <title>Leetcode练习-11.Container With Most Water.md | tiger的个人博客</title>
-  <meta name="description" content="Container With Most WaterGiven n non-negative integers a1, a2, …, an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i,">
+  <meta name="description" content="11. Container With Most WaterGiven n non-negative integers a1, a2, …, an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (">
 <meta name="keywords" content="Leetcode">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Leetcode练习-11.Container With Most Water.md">
 <meta property="og:url" content="http://tiger07706.github.io/2018/10/31/Leetcode练习-11-Container-With-Most-Water-md/index.html">
 <meta property="og:site_name" content="迷途小学生">
-<meta property="og:description" content="Container With Most WaterGiven n non-negative integers a1, a2, …, an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i,">
+<meta property="og:description" content="11. Container With Most WaterGiven n non-negative integers a1, a2, …, an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-01T03:35:05.220Z">
+<meta property="og:updated_time" content="2018-11-01T06:14:02.731Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Leetcode练习-11.Container With Most Water.md">
-<meta name="twitter:description" content="Container With Most WaterGiven n non-negative integers a1, a2, …, an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i,">
+<meta name="twitter:description" content="11. Container With Most WaterGiven n non-negative integers a1, a2, …, an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (">
   <!-- Canonical links -->
   <link rel="canonical" href="http://tiger07706.github.io/2018/10/31/Leetcode练习-11-Container-With-Most-Water-md/index.html">
   
@@ -387,13 +387,9 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <blockquote>
-<ol start="11">
-<li>Container With Most Water<br>Given n non-negative integers a1, a2, …, an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.   </li>
-</ol>
-</blockquote>
+        <h2 id="11-Container-With-Most-Water"><a href="#11-Container-With-Most-Water" class="headerlink" title="11. Container With Most Water"></a>11. Container With Most Water</h2><p>Given n non-negative integers a1, a2, …, an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.<br>Example:   </p>
 <blockquote>
-<p>Example:<br>Input: [1,8,6,2,5,4,8,3,7]<br>Output: 49</p>
+<p>Input: [1,8,6,2,5,4,8,3,7]<br>Output: 49</p>
 </blockquote>
 <p>解答：暴力求解，时间复杂度O(n^2),空间复杂度O(1)</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public int maxArea(int[] height) &#123;</span><br><span class="line">  int max = -1;</span><br><span class="line">  for (int i = 0; i &lt; height.length; i++) &#123;</span><br><span class="line">    for (int j = i + 1; j &lt; height.length; j++) &#123;</span><br><span class="line">      int high = height[i] &gt; height[j] ? height[j] : height[i];</span><br><span class="line">      int temp = (j - i) * high;</span><br><span class="line">      max = max &gt; temp ? max : temp;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
