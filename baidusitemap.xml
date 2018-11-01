@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://tiger07706.github.io/2018/11/01/Leetcode%E7%BB%83%E4%B9%A0-662-Maximum-Width-of-Binary-Tree/</loc>
+    <lastmod>2018-11-01T08:38:43.991Z</lastmod>
+  </url>  <url>
     <loc>http://tiger07706.github.io/2018/11/01/Leetcode%E7%BB%83%E4%B9%A0-42-Trapping-Rain-Water/</loc>
-    <lastmod>2018-11-01T06:25:03.544Z</lastmod>
+    <lastmod>2018-11-01T06:34:28.461Z</lastmod>
   </url>  <url>
     <loc>http://tiger07706.github.io/2018/11/01/Leetcode%E7%BB%83%E4%B9%A0-27-Remove-Element/</loc>
     <lastmod>2018-11-01T06:16:53.012Z</lastmod>
