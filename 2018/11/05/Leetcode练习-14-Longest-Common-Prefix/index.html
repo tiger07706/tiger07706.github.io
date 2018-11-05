@@ -17,21 +17,17 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>Leetcode练习-746.Min Cost Climbing Stairs | tiger的个人博客</title>
-  <meta name="description" content="746. 使用最小花费爬楼梯数组的每个索引做为一个阶梯，第 i个阶梯对应着一个非负数的体力花费值 costi。每当你爬上一个阶梯你都要花费对应的体力花费值，然后你可以选择继续爬一个阶梯或者爬两个阶梯。您需要找到达到楼层顶部的最低花费。在开始时，你可以选择从索引为 0 或 1 的元素作为初始阶梯。示例1：  输入: cost = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1">
-<meta name="keywords" content="Leetcode,动态规划">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Leetcode练习-746.Min Cost Climbing Stairs">
-<meta property="og:url" content="http://tiger07706.github.io/2018/11/01/Leetcode练习-746-Min-Cost-Climbing-Stairs/index.html">
+  <title>Leetcode练习-14.Longest Common Prefix | tiger的个人博客</title>
+  <meta property="og:type" content="article">
+<meta property="og:title" content="Leetcode练习-14.Longest Common Prefix">
+<meta property="og:url" content="http://tiger07706.github.io/2018/11/05/Leetcode练习-14-Longest-Common-Prefix/index.html">
 <meta property="og:site_name" content="迷途小学生">
-<meta property="og:description" content="746. 使用最小花费爬楼梯数组的每个索引做为一个阶梯，第 i个阶梯对应着一个非负数的体力花费值 costi。每当你爬上一个阶梯你都要花费对应的体力花费值，然后你可以选择继续爬一个阶梯或者爬两个阶梯。您需要找到达到楼层顶部的最低花费。在开始时，你可以选择从索引为 0 或 1 的元素作为初始阶梯。示例1：  输入: cost = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-02T09:58:19.804Z">
+<meta property="og:updated_time" content="2018-11-05T02:46:49.829Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Leetcode练习-746.Min Cost Climbing Stairs">
-<meta name="twitter:description" content="746. 使用最小花费爬楼梯数组的每个索引做为一个阶梯，第 i个阶梯对应着一个非负数的体力花费值 costi。每当你爬上一个阶梯你都要花费对应的体力花费值，然后你可以选择继续爬一个阶梯或者爬两个阶梯。您需要找到达到楼层顶部的最低花费。在开始时，你可以选择从索引为 0 或 1 的元素作为初始阶梯。示例1：  输入: cost = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1">
+<meta name="twitter:title" content="Leetcode练习-14.Longest Common Prefix">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://tiger07706.github.io/2018/11/01/Leetcode练习-746-Min-Cost-Climbing-Stairs/index.html">
+  <link rel="canonical" href="http://tiger07706.github.io/2018/11/05/Leetcode练习-14-Longest-Common-Prefix/index.html">
   
   
     <link rel="icon" href="/favicon.png" type="image/x-icon">
@@ -340,14 +336,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-Leetcode练习-746-Min-Cost-Climbing-Stairs" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-Leetcode练习-14-Longest-Common-Prefix" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      Leetcode练习-746.Min Cost Climbing Stairs
+      Leetcode练习-14.Longest Common Prefix
     </h1>
   
 
@@ -355,22 +351,12 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2018/11/01/Leetcode练习-746-Min-Cost-Climbing-Stairs/" class="article-date">
-	  <time datetime="2018-11-01T09:27:48.000Z" itemprop="datePublished">2018-11-01</time>
+	<a href="/2018/11/05/Leetcode练习-14-Longest-Common-Prefix/" class="article-date">
+	  <time datetime="2018-11-05T02:46:49.000Z" itemprop="datePublished">2018-11-05</time>
 	</a>
 </span>
         
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/Leetcode练习/">Leetcode练习</a>
-  </span>
-
         
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/Leetcode/">Leetcode</a>, <a class="article-tag-link" href="/tags/动态规划/">动态规划</a>
-  </span>
-
 
         
 	<span class="article-read hidden-xs">
@@ -381,21 +367,13 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/11/01/Leetcode练习-746-Min-Cost-Climbing-Stairs/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/11/05/Leetcode练习-14-Longest-Common-Prefix/#comments" class="article-comment-link">评论</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h2 id="746-使用最小花费爬楼梯"><a href="#746-使用最小花费爬楼梯" class="headerlink" title="746. 使用最小花费爬楼梯"></a>746. 使用最小花费爬楼梯</h2><p>数组的每个索引做为一个阶梯，第 i个阶梯对应着一个非负数的体力花费值 cost<a href="索引从0开始">i</a>。<br>每当你爬上一个阶梯你都要花费对应的体力花费值，然后你可以选择继续爬一个阶梯或者爬两个阶梯。<br>您需要找到达到楼层顶部的最低花费。在开始时，你可以选择从索引为 0 或 1 的元素作为初始阶梯。<br>示例1：</p>
-<blockquote>
-<p>输入: cost = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1]<br>输出: 6<br>解释: 最低花费方式是从cost[0]开始，逐个经过那些1，跳过cost[3]，一共花费6。</p>
-</blockquote>
-<p>注意：</p>
-<p>cost 的长度将会在 [2, 1000]。<br>每一个 cost[i] 将会是一个Integer类型，范围为 [0, 999]。<br><a href="https://leetcode-cn.com/problems/min-cost-climbing-stairs/description/" target="_blank" rel="noopener">题目链接：https://leetcode-cn.com/problems/min-cost-climbing-stairs/description/</a></p>
-<p>解答：<br>这是经典的动态规划题目，每次动作可以选择爬一个阶梯或者两个阶梯，而总体花费最小的走法应该是<br>（走一步的开销）+（走剩下的路的最小开销） 和（走两步的开销）+（走剩下的路的最小开销）之间的较小值。<br>这样说太费劲了，写成公式是这样的：<br><strong> dp[k] = Math.min(cost[i-1]+dp[k-1],cost[i]+dp[k-2]) </strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public int minCostClimbingStairs(int[] cost) &#123;</span><br><span class="line">  // 可以直接到达</span><br><span class="line">  if (cost.length &lt;= 1)</span><br><span class="line">    return 0;</span><br><span class="line"></span><br><span class="line">  int dp0 = 0, dp1 = 0, dp2 = 0;</span><br><span class="line">  for (int i = 1; i &lt; cost.length; i++) &#123;</span><br><span class="line">    if (cost[i] == cost[i - 1]) &#123;</span><br><span class="line">      dp0 = cost[i - 1] + dp1;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      dp0 = (dp2 + cost[i]) &gt;= (dp1 + cost[i - 1]) ? (dp1 + cost[i - 1])</span><br><span class="line">          : (dp2 + cost[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    dp1 = dp2;</span><br><span class="line">    dp2 = dp0;</span><br><span class="line">  &#125;</span><br><span class="line">  return dp0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+        
       
     </div>
     <div class="article-footer">
@@ -404,7 +382,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://tiger07706.github.io/2018/11/01/Leetcode练习-746-Min-Cost-Climbing-Stairs/" title="Leetcode练习-746.Min Cost Climbing Stairs" target="_blank" rel="external">http://tiger07706.github.io/2018/11/01/Leetcode练习-746-Min-Cost-Climbing-Stairs/</a>
+      <a href="http://tiger07706.github.io/2018/11/05/Leetcode练习-14-Longest-Common-Prefix/" title="Leetcode练习-14.Longest Common Prefix" target="_blank" rel="external">http://tiger07706.github.io/2018/11/05/Leetcode练习-14-Longest-Common-Prefix/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -450,13 +428,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2018/11/02/Leetcode练习-463-Island-Perimeter/" title="Leetcode练习-463. Island Perimeter"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/2018/11/01/Leetcode练习-662-Maximum-Width-of-Binary-Tree/" title="Leetcode练习-662.Maximum Width of Binary Tree"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2018/11/02/Leetcode练习-463-Island-Perimeter/" title="Leetcode练习-463. Island Perimeter"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
